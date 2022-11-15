@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 const Contact = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
     useEffect(() => {
-        console.log(selected)
         if(selected === "Contact"){
             setOpen(true);
         }

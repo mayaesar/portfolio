@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Wrapper>
             <TopLogo onClick={() => setSelected("Home")}>
-                <img class="logo" src={Logo} />
+                <img src={Logo} />
             </TopLogo>
         {/* <Router>
           <GlobalStyles />
@@ -26,16 +26,16 @@ const App = () => {
         <GlobalStyles />
         <MobileNav>
         <Pages>
-            <div>
+            <div className="page">
               <Home selected={selected} setSelected={setSelected}/>
             </div>
-            <div>
+            <div className="page">
               <About selected={selected} setSelected={setSelected}/>
             </div>
-            <div>
+            <div className="page">
               <Gallery selected={selected} setSelected={setSelected}/>
             </div>
-            <div>
+            <div className="page">
               <Contact selected={selected} setSelected={setSelected}/>
             </div>
         </Pages>
@@ -59,7 +59,6 @@ const TopLogo = styled.div`
       width: 20vw;
     }
     @media ${Device.mobileL}{
-        width: 40vw;
         img{
             width: 30vw;
         }
@@ -74,7 +73,7 @@ const MobileNav = styled.div`
 const Pages = styled.div`
   padding: 5px;
   padding-top: 20vw;
-  div{
+  .page{
     border-bottom: 0.2px black solid;
   }
 `;

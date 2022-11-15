@@ -1,0 +1,81 @@
+body{
+    width: 90%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    width: 100%;
+    padding-left: 10%;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+    font-size: 20px; 
+    display: inline-block;  
+}
+.banner img{
+    width: 100%;
+}
+h2{
+    text-align: center;
+}
+.image4{
+    width: 80%;
+    margin: auto;
+}
+.image4 img{
+    width: 20%;
+    padding: 2%;
+}
+ .image4 img:hover{
+     opacity: 80%;
+     width: 21%;
+ }
+
+ button{
+    background-color: rgba(255, 255, 255, 0.603); 
+    width: 20%;
+ }
+ button:hover{
+     background-color: gray;
+ }
+ button a{
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+    font-size: 20px; 
+    display: inline-block;  
+ }
+
+ .grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-gap: 20px;
+     align-items: center;
+     justify-items: center;
+ }
+ .grid img{
+     width: 100%;
+ }
+
+ .menu div{
+     float: left;
+     width: 45%;
+     clear: right;
+     padding: 2%;
+ }
+
+ footer{
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+    color: white; 
+    text-align: center; 
+    padding-top: 20px;
+ }

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
-const Home = ({selected, setSelected}) => {
+const About = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
     useEffect(() => {
         console.log(selected)
-        if(selected === "Home"){
+        if(selected === "About"){
             setOpen(true);
         }
         else{
@@ -14,12 +14,14 @@ const Home = ({selected, setSelected}) => {
     }, [selected])
     return(
         <Wrapper>
+            <h2 onClick={() => setSelected("About")}>About Me</h2>
             {isOpen? "open":"closed"}
         </Wrapper>
     );
 
 }
 const Wrapper = styled.div`
+
 `;
 
-export default Home;
+export default About;

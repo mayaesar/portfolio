@@ -3,16 +3,20 @@ import { useEffect, useState } from "react";
 import RestaurantImg from "./assets/covers/Screen Shot 2022-05-02 at 7.29.18 PM.png";
 import KitchenImg from "./projectsFolder/kitchenDrawing/drawingthing.png";
 import CorbusierImg from "./projectsFolder/leCorbusier/assignment1full.png";
+import Modal from "./Modal";
+import { Device } from "./Devices";
 
 const Projects = ({displayCategory}) => {
 const [displaying, setDisplaying] = useState(null);
+const [show, setShow] = useState(false);
+const [modal, setModal] = useState(null);
 
 const projects = [
     {img: RestaurantImg,
         title:"Restaurant site",
         category:"front",
         description:"This was a class project at CDI College where I create a site with a minimum of 3 pages.",
-        modal:"./assets/covers/Screen Shot 2022-05-02 at 7.29.18 PM.png",
+        modal: RestaurantImg,
         link:null,
         },
     {img: KitchenImg,
@@ -55,16 +59,32 @@ const projects = [
 
     return displaying?(
         <Wrapper>
+            <Modal show={show} modal={modal} onClose={() => setShow(false)}/>
             {displaying.map((project) => {
-                return(
-                    <Card>
-                        <img src={project.img}/>
-                        <div className="text">
-                            <h1>{project.title}</h1>
-                            <p>{project.description}</p>
-                        </div>
-                    </Card>
-                )
+                if(project.modal !== null){
+                    return(
+                        <Card onClick={() => {
+                            setShow(true) 
+                            setModal(project.modal)}}>
+                            <img src={project.img}/>
+                            <div className="text">
+                                <h1>{project.title}</h1>
+                                <p>{project.description}</p>
+                            </div>
+                        </Card>
+                    );
+                }
+                else{
+                    return(
+                        <Card>
+                            <img src={project.img}/>
+                            <div className="text">
+                                <h1>{project.title}</h1>
+                                <p>{project.description}</p>
+                            </div>
+                        </Card>
+                    );
+                }
             })}
         </Wrapper>
     ):(
@@ -76,10 +96,13 @@ const projects = [
 const Wrapper = styled.div`
     max-width: 90vw;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4px;
+    @media ${Device.tablet}{
+        padding-top: 110px;
+    }
 `;
 const Card = styled.div`
     background-color: white;
@@ -100,9 +123,13 @@ const Card = styled.div`
         font-size: 4vw;
     }
     p{
-        font-size: 3.4vw;
+        font-size: 3.5vw;
     }
-
+    @media ${Device.tablet}{
+        h1{
+            font-size: 3.7vw;
+        }
+    }
 `;
 
 export default Projects;

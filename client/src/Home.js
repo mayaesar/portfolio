@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { Device } from "./Devices";
 
 const Home = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
@@ -36,30 +37,39 @@ const Home = ({selected, setSelected}) => {
 
 }
 const Wrapper = styled.div`
+    max-height: 60vh;
+    overflow: scroll;
     .video{
         height: 200px;
         margin: 5px;
         border: 0.2px black solid;
     }
-
+    @media ${Device.tablet}{
+        max-height: 55vh;
+        overflow: scroll;
+    }
+    @media ${Device.desktop}{
+        .video{
+            width: 40vw;
+        }
+    }
 `;
 
 const Text = styled.div`
     margin: 5px;
     padding: 5px;
     h1{
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
     p{
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
     button{
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         background-color: white;
         border: 0.2px black solid;
         border-radius: 2vw;
     }
-
 `;
 
 export default Home;

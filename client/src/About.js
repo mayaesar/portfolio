@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { Device } from "./Devices";
 
 const About = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
@@ -60,7 +61,7 @@ const About = ({selected, setSelected}) => {
 
 }
 const Wrapper = styled.div`
-    max-height: 75vh;
+    max-height: 60vh;
     overflow: scroll;
     .title{
         padding: 8px;
@@ -70,32 +71,41 @@ const Wrapper = styled.div`
         font-size: 5vw;
         padding-bottom: 5px;
     }
+    @media ${Device.tablet}{
+        max-height: 55vh;
+        overflow: scroll;
+    }
 `;
 const Nav = styled.div`
     padding: 5px;
     font-size: 5vw;
+    @media ${Device.tablet}{
+        font-size: 4vw;
+    }
 `;
 const Text = styled.div`
     margin: 5px;
     padding: 10px;
     margin-top: 15px;
     h1{
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
     p, li{
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
     li{
         padding-bottom: 3px;
     }
     button{
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         background-color: white;
         border: 0.2px black solid;
         border-radius: 2vw;
         margin-left: 5vw;
     }
-    
+    @media ${Device.tablet}{
+        padding-top: 20px;
+    }
 `;
 const Image = styled.div`
         height: 200px;

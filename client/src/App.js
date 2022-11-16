@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Home from "./Home";
-import Logo from "./assets/nobglogo-01.svg"
+import Logo from "./assets/logo2023.svg"
 import { Device } from "./Devices";
 import { useState } from "react";
 import About from "./About";
@@ -24,7 +24,7 @@ const App = () => {
           </Routes>
         </Router> */}
         <GlobalStyles />
-        <MobileNav>
+        <Nav>
         <Pages>
             <div className="page">
               <Home selected={selected} setSelected={setSelected}/>
@@ -39,7 +39,7 @@ const App = () => {
               <Contact selected={selected} setSelected={setSelected}/>
             </div>
         </Pages>
-        </MobileNav>
+        </Nav>
         
         
     </Wrapper>
@@ -47,6 +47,8 @@ const App = () => {
 }
 
 const Wrapper = styled.div`
+  max-width: 100vw;
+  overflow: hidden;
 `;
 const TopLogo = styled.div`
     position:fixed;
@@ -55,24 +57,22 @@ const TopLogo = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color: white;
     img{
-      width: 20vw;
+      width: 30vw;
     }
-    @media ${Device.mobileL}{
+    @media ${Device.desktop}{
         img{
-            width: 30vw;
+          width: 20vw;
         }
     }
 `;
-const MobileNav = styled.div`
-  display: none;
-  @media ${Device.mobileL}{
-    display: block;
-  }
+const Nav = styled.div`
+
 `;
 const Pages = styled.div`
   padding: 5px;
-  padding-top: 20vw;
+  padding-top: 25vw;
   .page{
     border-bottom: 0.2px black solid;
   }

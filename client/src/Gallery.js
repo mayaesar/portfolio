@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Projects from "./Projects";
+import { Device } from "./Devices";
 
 const Gallery = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
@@ -41,7 +42,7 @@ const Gallery = ({selected, setSelected}) => {
 
 }
 const Wrapper = styled.div`
-    max-height: 75vh;
+    max-height: 60vh;
     overflow: scroll;
     .title{
         padding: 8px;
@@ -51,23 +52,32 @@ const Wrapper = styled.div`
         font-size: 5vw;
         padding-bottom: 5px;
     }
+    @media ${Device.tablet}{
+        max-height: 55vh;
+        overflow: scroll;
+    }
 `;
 const Nav = styled.div`
     padding: 5px;
     font-size: 5vw;
+    @media ${Device.tablet}{
+        font-size: 4vw;
+    }
 `;
 
 const MyProjects = styled.div`
     margin: 5px;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
     .buttonContainer{
+        background-color: white;
         display: flex;
         gap: 10px;
         width: 100vw;
         padding-bottom: 12px;
         position: fixed;
         overflow-x: scroll;
+        padding-top: 12px;
     }
     button{
         font-size: 3.5vw;
@@ -75,6 +85,19 @@ const MyProjects = styled.div`
         border: 0.2px black solid;
         border-radius: 2vw;
         min-width:75px;
+    }
+    @media ${Device.tablet}{
+        min-height: 120px;
+        padding-top: 30px;
+        .buttonContainer{
+            position: fixed;
+            overflow-x: scroll;
+        }
+        button{
+            width: 170px;
+            font-size: 3.5vw;
+            padding: 6px;
+        }
     }
 `;
 

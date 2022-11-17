@@ -72,10 +72,12 @@ const Wrapper = styled.div`
     p{
         font-size: 4vw;
     }
-    @media ${Device.tablet}{
-        max-height: 55vh;
-        overflow: scroll;
+    @media ${Device.laptop}{
+        .title{
+            font-size: 2vw;
+        }
     }
+    
 `;
 const Nav = styled.div`
     padding: 5px;
@@ -86,6 +88,12 @@ const Nav = styled.div`
     }
     @media ${Device.tablet}{
         font-size: 4vw;
+    }
+    @media ${Device.laptop}{
+        font-size: 2vw;
+        .icons{
+            font-size: 1.5vw;
+        }
     }
 `;
 const Left = styled.div`
@@ -107,6 +115,18 @@ const Left = styled.div`
         width: 40vw;
         margin-top: 60px;
     }
+    @media ${Device.laptop}{
+        h1{
+            font-size: 2vw;
+        }
+        p, li{
+            font-size: 1.5vw;
+        }
+        button{
+            font-size: 1.5vw;
+            border-radius: 2vw;
+        }
+    }
 `;
 const Form = styled.div`
     margin: 5px;
@@ -115,6 +135,18 @@ const Form = styled.div`
     width: 50vw;
     @media ${Device.tablet}{
         margin-left: 10px;
+    }
+    @media ${Device.laptop}{
+        h1{
+            font-size: 2vw;
+        }
+        p, li{
+            font-size: 1.5vw;
+        }
+        button{
+            font-size: 1.5vw;
+            border-radius: 2vw;
+        }
     }
 `;
 

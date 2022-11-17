@@ -48,6 +48,7 @@ const App = () => {
 
 const Wrapper = styled.div`
   max-width: 100vw;
+  max-height: 100vh;
   overflow: hidden;
 `;
 const TopLogo = styled.div`
@@ -61,9 +62,14 @@ const TopLogo = styled.div`
     img{
       width: 30vw;
     }
-    @media ${Device.desktop}{
+    @media ${Device.tablet}{
+      img{
+        width: 25vw;
+      }
+    }
+    @media ${Device.laptop}{
         img{
-          width: 20vw;
+          width: 15vw;
         }
     }
 `;
@@ -76,6 +82,12 @@ const Pages = styled.div`
   .page{
     border-bottom: 0.2px black solid;
   }
+  @media ${Device.tablet}{
+      padding-top: 18vw;
+    }
+  @media ${Device.laptop}{
+      padding-top: 12vw;
+    }
 `;
 
 export default App;

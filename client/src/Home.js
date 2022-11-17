@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { Device } from "./Devices";
+import FinalVideo from "./assets/finalProjectVideo.mov";
 
 const Home = ({selected, setSelected}) => {
     const [isOpen, setOpen] = useState(true);
@@ -15,7 +16,7 @@ const Home = ({selected, setSelected}) => {
     return isOpen?(
         <Wrapper>
             <div className="video">
-                Insert Video Here
+                <video src={FinalVideo} type="video/mov" controls="controls" autoplay="true"/>
             </div>
             <Text>
             <h1>Welcome</h1>  <br/> 
@@ -39,17 +40,17 @@ const Home = ({selected, setSelected}) => {
 const Wrapper = styled.div`
     max-height: 60vh;
     overflow: scroll;
-    .video{
-        height: 200px;
+    video{
+        width: 100vw;
         margin: 5px;
-        border: 0.2px black solid;
     }
-    @media ${Device.tablet}{
-        max-height: 55vh;
-        overflow: scroll;
-    }
-    @media ${Device.desktop}{
-        .video{
+    @media ${Device.laptop}{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        video{
+            margin-top: 35px;
             width: 40vw;
         }
     }
@@ -69,6 +70,19 @@ const Text = styled.div`
         background-color: white;
         border: 0.2px black solid;
         border-radius: 2vw;
+    }
+    @media ${Device.laptop}{
+        width: 40vw;
+        h1{
+            font-size: 2vw;
+        }
+        p{
+            font-size: 1.5vw;
+        }
+        button{
+            font-size: 1.5vw;
+            border-radius: 2vw;
+        }
     }
 `;
 

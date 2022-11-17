@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import RestaurantImg from "./assets/covers/Screen Shot 2022-05-02 at 7.29.18 PM.png";
 import KitchenImg from "./projectsFolder/kitchenDrawing/drawingthing.png";
 import CorbusierImg from "./projectsFolder/leCorbusier/assignment1full.png";
+import SchedulerProject from "./projectsFolder/schedulerProject/Screenshot 2022-11-17 at 2.04.28 PM.png";
+import GarfieldGame from "./projectsFolder/garfieldGame/Screenshot 2022-11-17 at 1.56.00 PM.png";
+import GroupProject from "./projectsFolder/eComGroup/Screen_Shot_2022-11-17_at_14.44.09.png";
 import Modal from "./Modal";
 import { Device } from "./Devices";
 
@@ -12,6 +15,27 @@ const [show, setShow] = useState(false);
 const [modal, setModal] = useState(null);
 
 const projects = [
+    {img:SchedulerProject,
+        title:"Add me to your Schedule",
+        category:"full",
+        description:"This is a reverse scheduler where you add your free time to your calendar and connect with friends to make plans.",
+        modal:null,
+        link:null,
+        },
+    {img:GroupProject,
+        title:"E-commerce site",
+        category:"full",
+        description:"This was a group project at Concordia's bootcamp where we had to create an E-commerce site with the products we were given.",
+        modal:null,
+        link:null,
+        },
+    {img:GarfieldGame,
+        title:"Garfield Game",
+        category:"front",
+        description:"This was a project at Concordia's bootcamp where I created a game that involved the player to use their keyboard.",
+        modal:null,
+        link:null,
+        },
     {img: RestaurantImg,
         title:"Restaurant site",
         category:"front",
@@ -103,6 +127,9 @@ const Wrapper = styled.div`
     @media ${Device.tablet}{
         padding-top: 110px;
     }
+    @media ${Device.laptop}{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 `;
 const Card = styled.div`
     background-color: white;
@@ -130,6 +157,20 @@ const Card = styled.div`
             font-size: 3.7vw;
         }
     }
+    @media ${Device.laptop}{
+        img{
+            margin: 1vw;
+            width: 20vw;
+            height: 11vw;
+        }
+        h1{
+            font-size: 1.5vw;
+        }
+        p, li{
+            font-size: 1vw;
+        }
+    }
+    
 `;
 
 export default Projects;

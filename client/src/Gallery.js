@@ -52,16 +52,20 @@ const Wrapper = styled.div`
         font-size: 5vw;
         padding-bottom: 5px;
     }
-    @media ${Device.tablet}{
-        max-height: 55vh;
-        overflow: scroll;
+    @media ${Device.laptop}{
+        .title{
+            font-size: 2vw;
+        }
     }
 `;
 const Nav = styled.div`
     padding: 5px;
     font-size: 5vw;
     @media ${Device.tablet}{
-        font-size: 4vw;
+        font-size: 3.5vw;
+    }
+    @media ${Device.laptop}{
+        font-size: 2vw;
     }
 `;
 
@@ -97,6 +101,13 @@ const MyProjects = styled.div`
             width: 170px;
             font-size: 3.5vw;
             padding: 6px;
+        }
+    }
+    @media ${Device.laptop}{
+        padding-top: 28px;
+        button{
+            font-size: 1.4vw;
+            border-radius: 1.5vw;
         }
     }
 `;

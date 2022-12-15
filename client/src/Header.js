@@ -27,6 +27,7 @@ const Wrapper = styled.div`
 const HeaderLinks = styled(Link)`
     text-decoration: none;
     padding: 2px;
+    font-family: var(--primary-font-family);
     
 `;
 export default Header;

@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { Device } from "./Devices";
 import Img2 from "./assets/IMG_1824.png";
 import Img1 from "./assets/IMG_9908.jpeg";
-
-
+import { Link } from "react-router-dom";
 
 const About = () => {
     return (
@@ -28,7 +27,7 @@ const About = () => {
                         technology and design and look forward to the next chapters as new learnings and experiences continue to 
                         nourish my story.  
                     </p><br/>
-                    <button>Contact Me</button>
+                    <button><Link to={"/contact"}>Contact Me</Link></button>
                 </Text>
                 <Image className="img2">
                     <img src={Img2}/>

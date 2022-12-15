@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Device } from "./Devices";
 import FinalVideo from "./assets/finalProjectVideo.mov";
 
@@ -19,7 +19,7 @@ const Home = () => {
                 new ways to take people on journeys through technology. 
                 I've got lots to learn, but am committed to my art, and have many stories to tell.</p>
                 <br/> 
-                <button>Learn more</button>
+                <button><Link to={"/about"}>Learn more</Link></button>
             </Text>
         </Wrapper>
     );

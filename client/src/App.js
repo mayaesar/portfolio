@@ -6,10 +6,9 @@ import About from "./About";
 import Gallery from "./Gallery";
 import Contact from "./Contact";
 import Header from "./Header";
-import "./assets/fonts/PPNeueMachina-PlainUltrabold.otf"
 
 const App = () => {
-  
+
   return (
     <Wrapper>
         <Router>
@@ -28,7 +27,7 @@ const App = () => {
 }
 
 const Wrapper = styled.div`
-
+  overflow-x: ;
 `;
 
 

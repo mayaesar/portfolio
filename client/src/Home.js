@@ -3,17 +3,8 @@ import { useEffect, useState } from "react";
 import { Device } from "./Devices";
 import FinalVideo from "./assets/finalProjectVideo.mov";
 
-const Home = ({selected, setSelected}) => {
-    const [isOpen, setOpen] = useState(true);
-    useEffect(() => {
-        if(selected === "Home"){
-            setOpen(true);
-        }
-        else{
-            setOpen(false);
-        }
-    }, [selected])
-    return isOpen?(
+const Home = () => {
+    return (
         <Wrapper>
             <div className="video">
                 <video src={FinalVideo} type="video/mov" controls="controls" autoplay="true"/>
@@ -28,20 +19,16 @@ const Home = ({selected, setSelected}) => {
                 new ways to take people on journeys through technology. 
                 I've got lots to learn, but am committed to my art, and have many stories to tell.</p>
                 <br/> 
-                <button onClick={() => setSelected("About")}>Learn more</button>
+                <button>Learn more</button>
             </Text>
         </Wrapper>
-    ):(
-        <>
-        </>
     );
 
 }
 const Wrapper = styled.div`
-    max-height: 60vh;
-    overflow: scroll;
+    padding-top: 40px;
     video{
-        width: 100vw;
+        width: 97vw;
         margin: 5px;
     }
     @media ${Device.laptop}{
@@ -68,8 +55,9 @@ const Text = styled.div`
     button{
         font-size: 4.5vw;
         background-color: white;
-        border: 0.2px black solid;
-        border-radius: 2vw;
+        border: 1px black solid;
+        margin-left: 5vw;
+        padding: 5px;
     }
     @media ${Device.laptop}{
         width: 40vw;

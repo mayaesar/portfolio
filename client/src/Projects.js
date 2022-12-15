@@ -34,7 +34,7 @@ const projects = [
         category:"front",
         description:"This was a project at Concordia's bootcamp where I created a game that involved the player to use their keyboard.",
         modal:null,
-        link:null,
+        link:"https://classy-smakager-3ffa68.netlify.app/",
         },
     {img: RestaurantImg,
         title:"Restaurant site",
@@ -100,13 +100,16 @@ const projects = [
                 }
                 else{
                     return(
-                        <Card>
-                            <img src={project.img}/>
-                            <div className="text">
-                                <h1>{project.title}</h1>
-                                <p>{project.description}</p>
-                            </div>
-                        </Card>
+                        <a href={project.link} target="_blank">
+                            <Card>
+                                <img src={project.img}/>
+                                <div className="text">
+                                    <h1>{project.title}</h1>
+                                    <p>{project.description}</p>
+                                </div>
+                            </Card>
+                        </a>
+                        
                     );
                 }
             })}
@@ -129,6 +132,9 @@ const Wrapper = styled.div`
     }
     @media ${Device.laptop}{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    a{
+        text-decoration: none;
     }
 `;
 const Card = styled.div`

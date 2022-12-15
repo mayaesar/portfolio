@@ -1,27 +1,21 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import { Device } from "./Devices";
+import Img2 from "./assets/IMG_1824.png";
+import Img1 from "./assets/IMG_9908.jpeg";
 
-const About = ({selected, setSelected}) => {
-    const [isOpen, setOpen] = useState(true);
-    useEffect(() => {
-        if(selected === "About"){
-            setOpen(true);
-        }
-        else{
-            setOpen(false);
-        }
-    }, [selected])
-    return isOpen?(
+
+
+const About = () => {
+    return (
         <Wrapper>
-            <h2 onClick={() => setSelected("About")} className="title" id="opened">About Me</h2>
+            <h2>About Me</h2>
             <div className="info">
                 <Text>
                     <br/>
                     <h1>Hey, I'm Maya.</h1><br/>
                     <p>I'M A FULL-STACK WEB DEVELOPER, WEB DESIGNER, CONTENT CREATOR READY TO SHOW THE WORLD WHAT I GOT!</p>
                     <br/>
-                    <p> At age 12 I started dancing, it was a medium to express myself and a great way to channel my creativity, 
+                    <p> At age of 12 I started dancing, it was a medium to express myself and a great way to channel my creativity, 
                         in addition to expelling a ton of energy. Dancing allowed me to create something from nothing, which 
                         further fueled a joy that only comes from the love of THE creative process - and from then on, I knew 
                         that I wanted to be a creator.   In grade 9, I discovered a new form of art, the art of coding. Once 
@@ -34,12 +28,13 @@ const About = ({selected, setSelected}) => {
                         technology and design and look forward to the next chapters as new learnings and experiences continue to 
                         nourish my story.  
                     </p><br/>
-                    <button onClick={() => setSelected("Contact")}>Contact Me</button>
-                    <button>My CV</button>
+                    <button>Contact Me</button>
                 </Text>
-                <Image>
-                </Image>
                 <Image className="img2">
+                    <img src={Img2}/>
+                </Image>
+                <Image >
+                    <img src={Img1}/>
                 </Image>
                 <Text>
                     <h1>In case you were wondering...</h1> <br/>
@@ -54,19 +49,15 @@ const About = ({selected, setSelected}) => {
             </div>
 
         </Wrapper>
-    ):(
-        <Nav>
-            <h2 onClick={() => setSelected("About")} className="title">About Me</h2>
-        </Nav>
     );
 
 }
 const Wrapper = styled.div`
-    max-height: 60vh;
-    overflow: scroll;
+    padding-top: 40px;
     .title{
         padding: 8px;
         background-color: white;
+        border-bottom: 0.2px black solid;
         width: 100vw;
         position: fixed;
         font-size: 5vw;
@@ -93,16 +84,6 @@ const Wrapper = styled.div`
         }
     }
 `;
-const Nav = styled.div`
-    padding: 5px;
-    font-size: 5vw;
-    @media ${Device.tablet}{
-        font-size: 3.5vw;
-    }
-    @media ${Device.laptop}{
-        font-size: 2vw;
-    }
-`;
 const Text = styled.div`
     margin: 5px;
     padding: 10px;
@@ -119,9 +100,9 @@ const Text = styled.div`
     button{
         font-size: 4.5vw;
         background-color: white;
-        border: 0.2px black solid;
-        border-radius: 2vw;
+        border: 1px black solid;
         margin-left: 5vw;
+        padding: 5px;
     }
     @media ${Device.tablet}{
         padding-top: 20px;
@@ -140,8 +121,15 @@ const Text = styled.div`
     }
 `;
 const Image = styled.div`
-        height: 200px;
-        margin: 5px;
-        border: 0.2px black solid;
+        img{
+            width: 60vw;
+            margin-left: 20vw;
+        }
+        @media ${Device.laptop}{
+            img{
+                margin: 10vw;
+                width: 30vw;
+            }
+        }
 `;
 export default About;

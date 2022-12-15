@@ -3,22 +3,13 @@ import { useEffect, useState } from "react";
 import Projects from "./Projects";
 import { Device } from "./Devices";
 
-const Gallery = ({selected, setSelected}) => {
-    const [isOpen, setOpen] = useState(true);
+const Gallery = () => {
     const [displayCategory, setDisplayCategory] = useState("all");
 
-    useEffect(() => {
-        if(selected === "Gallery"){
-            setOpen(true);
-        }
-        else{
-            setOpen(false);
-        }
-    }, [selected]);
 
-    return isOpen?(
+    return (
         <Wrapper>
-            <h2 onClick={() => setSelected("Gallery")} className="title">Gallery</h2>
+            <h2>Gallery</h2>
             <MyProjects>
                 <div className="buttonContainer">
                     <button className="btn active" onClick={() => setDisplayCategory("all")}> Show all</button>
@@ -34,19 +25,14 @@ const Gallery = ({selected, setSelected}) => {
             </MyProjects>
             
         </Wrapper>
-    ):(
-        <Nav>
-            <h2 onClick={() => setSelected("Gallery")} className="title">Gallery</h2>
-        </Nav>
-    )
-
+    );
 }
 const Wrapper = styled.div`
-    max-height: 60vh;
-    overflow: scroll;
+    padding-top: 40px;
     .title{
         padding: 8px;
-        background-color: white;
+        background-color: #E6E1F1;
+        border-bottom: 0.2px black solid;
         width: 100vw;
         position: fixed;
         font-size: 5vw;
@@ -56,16 +42,6 @@ const Wrapper = styled.div`
         .title{
             font-size: 2vw;
         }
-    }
-`;
-const Nav = styled.div`
-    padding: 5px;
-    font-size: 5vw;
-    @media ${Device.tablet}{
-        font-size: 3.5vw;
-    }
-    @media ${Device.laptop}{
-        font-size: 2vw;
     }
 `;
 

@@ -20,14 +20,14 @@ const projects = [
         category:"full",
         description:"This is a reverse scheduler where you add your free time to your calendar and connect with friends to make plans.",
         modal:null,
-        link:null,
+        link:"https://github.com/mayaesar/AddMeToYourSchedule",
         },
     {img:GroupProject,
         title:"E-commerce site",
         category:"full",
         description:"This was a group project at Concordia's bootcamp where we had to create an E-commerce site with the products we were given.",
         modal:null,
-        link:null,
+        link:"https://github.com/mayaesar/GroupProject-EcomSite",
         },
     {img:GarfieldGame,
         title:"Garfield Game",
@@ -40,8 +40,8 @@ const projects = [
         title:"Restaurant site",
         category:"front",
         description:"This was a class project at CDI College where I create a site with a minimum of 3 pages.",
-        modal: RestaurantImg,
-        link:null,
+        modal: null,
+        link:"https://63a0b96481c68b1b3ed5dfb9--bright-halva-2198d9.netlify.app/",
         },
     {img: KitchenImg,
         title:"Kitchen Drawing",
@@ -121,12 +121,12 @@ const projects = [
 }
 
 const Wrapper = styled.div`
-    max-width: 90vw;
-    margin: auto;
-    padding-top: 60px;
+    max-width: 80%;
+    //margin: auto;
+    padding-top: 10px;
     display: grid;
+    gap: 5px;
     grid-template-columns: 1fr 1fr;
-    gap: 4px;
     @media ${Device.tablet}{
         padding-top: 110px;
     }
@@ -139,24 +139,29 @@ const Wrapper = styled.div`
 `;
 const Card = styled.div`
     background-color: white;
-    border: 0.2px black solid;
+    border: var(--border);
     padding: 2px;
+    width: 40vw;
     img{
         margin: 2vw;
-        width: 40vw;
+        width: 35vw;
         height: 20vw;
         object-fit: cover;
     }
     .text{
         padding: 5px;
+        width: 38vw;
         height: 70px;
         overflow: scroll;
     }
     h1{
-        font-size: 4vw;
+        font-size: 3.5vw;
+        padding: 0;
+        margin: 0;
     }
     p{
         font-size: 3.5vw;
+        padding-top: 4px;
     }
     @media ${Device.tablet}{
         h1{

@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { Device } from "./Devices";
 import Img2 from "./assets/IMG_1824.png";
 import Img1 from "./assets/IMG_9908.jpeg";
-import { Link } from "react-router-dom";
 
 const About = () => {
     return (
         <Wrapper>
-            <h2>About Me</h2>
+            <h1 id="about">About Me</h1>
+            <div className="border"></div>
             <div className="info">
                 <Text>
                     <br/>
-                    <h1>Hey, I'm Maya.</h1><br/>
-                    <p>I'M A FULL-STACK WEB DEVELOPER, WEB DESIGNER, CONTENT CREATOR READY TO SHOW THE WORLD WHAT I GOT!</p>
+                    <h2>Hey, I'm Maya.</h2><br/>
+                    <p>I'M A FULL-STACK WEB DEVELOPER, WEB DESIGNER, CONTENT CREATOR READY TO SHOW THE WORLD WHAT I'VE GOT!</p>
                     <br/>
                     <p> At age of 12 I started dancing, it was a medium to express myself and a great way to channel my creativity, 
                         in addition to expelling a ton of energy. Dancing allowed me to create something from nothing, which 
@@ -27,7 +27,7 @@ const About = () => {
                         technology and design and look forward to the next chapters as new learnings and experiences continue to 
                         nourish my story.  
                     </p><br/>
-                    <button><Link to={"/contact"}>Contact Me</Link></button>
+                    <button>Contact Me</button>
                 </Text>
                 <Image className="img2">
                     <img src={Img2}/>
@@ -35,8 +35,9 @@ const About = () => {
                 <Image >
                     <img src={Img1}/>
                 </Image>
+                <div className="border"></div>
                 <Text>
-                    <h1>In case you were wondering...</h1> <br/>
+                    <h2>In case you were wondering...</h2> <br/>
                     <ul>
                         <li>I grew up and live in Montreal (Go Habs go)</li>
                         <li>I can sing most of "The Element of the Periodic Table" song</li>
@@ -52,15 +53,11 @@ const About = () => {
 
 }
 const Wrapper = styled.div`
-    padding-top: 40px;
-    .title{
-        padding: 8px;
-        background-color: white;
-        border-bottom: 0.2px black solid;
-        width: 100vw;
-        position: fixed;
-        font-size: 5vw;
-        padding-bottom: 5px;
+    padding-top: 10px;
+    h1{
+        margin: 5px;
+        padding: 5px;
+        font-size: 4.5vw;
     }
     .img2{
         display: none;
@@ -69,9 +66,6 @@ const Wrapper = styled.div`
         font-size: 3.5vw;
     }
     @media ${Device.laptop}{
-        .title{
-            font-size: 2vw;
-        }
         .info{
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -85,11 +79,7 @@ const Wrapper = styled.div`
 `;
 const Text = styled.div`
     margin: 5px;
-    padding: 10px;
-    margin-top: 15px;
-    h1{
-        font-size: 4.5vw;
-    }
+    padding: 5px;
     p, li{
         font-size: 4vw;
     }
@@ -97,11 +87,11 @@ const Text = styled.div`
         padding-bottom: 3px;
     }
     button{
-        font-size: 4.5vw;
+        font-size: 3.5vw;
         background-color: white;
-        border: 1px black solid;
-        margin-left: 5vw;
+        border: var(--border);
         padding: 5px;
+        font-family: var(--primary-font-family);
     }
     @media ${Device.tablet}{
         padding-top: 20px;
@@ -122,7 +112,7 @@ const Text = styled.div`
 const Image = styled.div`
         img{
             width: 60vw;
-            margin-left: 20vw;
+            margin-left: 15vw;
         }
         @media ${Device.laptop}{
             img{

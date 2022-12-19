@@ -1,33 +1,38 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import { Device } from "./Devices";
-import { Link } from "react-router-dom";
 import Logo from "./assets/logo2023.svg";
 
-const Header = () => {
+const Header = ({setScrollingTo}) => {
     return(
         <Wrapper>
-            <HeaderLinks to={"/"}>Home</HeaderLinks>
-            <HeaderLinks to={"/about"}>About Me</HeaderLinks>
-            <HeaderLinks to={"/gallery"}>Gallery</HeaderLinks>
-            <HeaderLinks to={"/contact"}>Contact Me</HeaderLinks>
+            <img src={Logo}/>
+            <h2 onClick={() => setScrollingTo("about")}>About Me</h2>
+            <h2 onClick={() => setScrollingTo("gallery")}>Gallery</h2>
+            <h2 onClick={() => setScrollingTo("contact")} className="last">Contact Me</h2>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position:fixed;
-    left: 0;
-    right: 0;
-`;
+    margin-top: 10px;
+    border-top: var(--border);
+    display: flex;
+    gap: 5px;
+    img{
+        margin-left: 5px;
+        padding-bottom: 10px;
+        width: 22vw;
+        border-right: var(--border);
+    }
+    h2{
+        padding-top: 25px;
+        border-right: var(--border);
+    }
+    .last{
+        border: none;
+    }
 
 
-const HeaderLinks = styled(Link)`
-    text-decoration: none;
-    padding: 2px;
-    font-family: var(--primary-font-family);
-    
 `;
+
 export default Header;

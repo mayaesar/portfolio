@@ -5,11 +5,10 @@ import { Device } from "./Devices";
 
 const Gallery = () => {
     const [displayCategory, setDisplayCategory] = useState("all");
-
-
     return (
         <Wrapper>
-            <h2>Gallery</h2>
+            <h1 id="gallery">Gallery</h1>
+            <div className="border"></div>
             <MyProjects>
                 <div className="buttonContainer">
                     <button className="btn active" onClick={() => setDisplayCategory("all")}> Show all</button>
@@ -23,47 +22,36 @@ const Gallery = () => {
                     <Projects displayCategory={displayCategory}/>
                 </div>
             </MyProjects>
-            
         </Wrapper>
     );
 }
 const Wrapper = styled.div`
-    padding-top: 40px;
-    .title{
-        padding: 8px;
-        background-color: #E6E1F1;
-        border-bottom: 0.2px black solid;
-        width: 100vw;
-        position: fixed;
-        font-size: 5vw;
-        padding-bottom: 5px;
-    }
-    @media ${Device.laptop}{
-        .title{
-            font-size: 2vw;
+    padding-top: 10px;
+        h1{
+            margin: 5px;
+            padding: 5px;
+            font-size: 4.5vw;
         }
+    @media ${Device.laptop}{
+        
     }
 `;
 
 const MyProjects = styled.div`
     margin: 5px;
     padding: 10px;
-    margin-top: 20px;
     .buttonContainer{
         background-color: white;
         display: flex;
-        gap: 10px;
-        width: 100vw;
-        padding-bottom: 12px;
-        position: fixed;
+        gap: 5px;
+        width: 100%;
         overflow-x: scroll;
-        padding-top: 12px;
     }
     button{
         font-size: 3.5vw;
         background-color: white;
-        border: 0.2px black solid;
-        border-radius: 2vw;
+        border: var(--border);
+        padding: 5px;
         min-width:75px;
     }
     @media ${Device.tablet}{

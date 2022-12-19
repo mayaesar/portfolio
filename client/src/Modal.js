@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     .modalContent{
         padding: 2vw;
         width: 90vw;
-        max-height: 80vw;
+        max-height: 80vh;
         overflow: scroll;
         background-color: white;
     }

@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { Device } from "./Devices";
 import FinalVideo from "./assets/finalProjectVideo.mov";
 
 const Home = () => {
     return (
-        <Wrapper>
-            <div className="video">
+        <Wrapper id="top">
+            <div className="video" >
                 <video src={FinalVideo} type="video/mov" controls="controls" autoplay="true"/>
             </div>
             <Text>
@@ -19,17 +18,17 @@ const Home = () => {
                 new ways to take people on journeys through technology. 
                 I've got lots to learn, but am committed to my art, and have many stories to tell.</p>
                 <br/> 
-                <button><Link to={"/about"}>Learn more</Link></button>
+                <button>Learn more</button>
             </Text>
         </Wrapper>
     );
-
 }
 const Wrapper = styled.div`
-    padding-top: 40px;
+    padding-top: 10px;
     video{
-        width: 97vw;
-        margin: 5px;
+        width: 90%;
+        margin-left: 5%;
+        border: var(--border);
     }
     @media ${Device.laptop}{
         margin: 10px;
@@ -53,12 +52,13 @@ const Text = styled.div`
         font-size: 4vw;
     }
     button{
-        font-size: 4.5vw;
+        font-size: 3.5vw;
         background-color: white;
-        border: 1px black solid;
-        margin-left: 5vw;
+        border: var(--border);
         padding: 5px;
+        font-family: var(--primary-font-family);
     }
+
     @media ${Device.laptop}{
         width: 40vw;
         h1{

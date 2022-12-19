@@ -7,6 +7,7 @@ export default createGlobalStyle`
         --header-font-size: 1.5vw;
         --subheader-font-size: 1.2vw;
         --paragraph-font-size: 1vw;
+        --border: .5px black solid;
     }
 
     /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -38,7 +39,6 @@ export default createGlobalStyle`
     }
 
     body{
-        width: 90%;
         margin: auto;
         max-width: 100vw;
     }

@@ -27,9 +27,9 @@ const App = () => {
             <GlobalStyles />
             <Header setScrollingTo={setScrollingTo}/>
             <div className="border"></div>
-            <Home/>
+            <Home setScrollingTo={setScrollingTo}/>
             <div className="border"></div>
-            <About/>
+            <About setScrollingTo={setScrollingTo}/>
             <div className="border"></div>
             <Gallery/>
             <div className="border"></div>
@@ -37,7 +37,7 @@ const App = () => {
             <div className="border"></div>
             <Footer />
             <div className="topBtn">
-              <button onClick={() => setScrollingTo("top")}><BiArrowToTop/></button>
+              <button className="scroll" onClick={() => setScrollingTo("top")}><BiArrowToTop/></button>
             </div>
       </Wrapper>
     </Bg>
@@ -68,7 +68,7 @@ const Wrapper = styled.div`
     border: var(--border);
     color: red;
   }
-  button{
+  .scroll{
     font-size: 3.5vw;
     border: var(--border);
     padding: 5px;

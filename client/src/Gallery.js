@@ -27,14 +27,19 @@ const Gallery = () => {
 }
 const Wrapper = styled.div`
     padding-top: 10px;
-        h1{
-            margin: 5px;
-            padding: 5px;
-            font-size: 4.5vw;
-        }
-        @media ${Device.tablet}{
-        h1{
+    #gallery{
+        margin: 5px;
+        padding: 5px;
+        font-size: 4.5vw;
+    }
+    @media ${Device.tablet}{
+        #gallery{
             font-size: 4vw;
+        }
+    }
+    @media ${Device.laptop}{
+        #gallery{
+            font-size: 2vw;
         }
     }
 `;
@@ -48,28 +53,28 @@ const MyProjects = styled.div`
         width: 100%;
         overflow-x: scroll;
     }
-    button{
+    .btn{
         font-size: 3.5vw;
+        font-family: var(--primary-font-family);
         background-color: #A0AEDC;
         border: var(--border);
         padding: 5px;
-        min-width:75px;
+        min-width:95px;
     }
     @media ${Device.tablet}{
         padding: 30px;
         .buttonContainer{
             gap: 10px;
         }
-        button{
+        .btn{
             font-size: 3vw;
-            min-width: 150px;
+            min-width: 155px;
         }
     }
     @media ${Device.laptop}{
         padding-top: 28px;
-        button{
-            font-size: 1.4vw;
-            border-radius: 1.5vw;
+        .btn{
+            font-size: 1.5vw;
         }
     }
 `;

@@ -47,6 +47,16 @@ const Wrapper = styled.div`
             border-right: var(--border);
         }
     }
+    @media ${Device.laptop}{
+        img{
+            width: 200px;
+        }
+        h2{
+            font-size: 1.8vw;
+            padding-right: 10px;
+            padding-top: 90px;
+        }
+    }
 
 
 `;

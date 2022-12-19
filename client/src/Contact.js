@@ -43,6 +43,11 @@ const Wrapper = styled.div`
             font-size: 3.2vw;
         }
     }
+    @media ${Device.laptop}{
+        h1{
+            font-size: 2vw;
+        }
+    }
 `;
 
 const Text = styled.div`
@@ -50,8 +55,8 @@ const Text = styled.div`
     padding: 10px;
     display: grid;
     @media ${Device.laptop}{
-        h1{
-            font-size: 2vw;
+        h2{
+            font-size: 1.8vw;
         }
         p, li{
             font-size: 1.5vw;

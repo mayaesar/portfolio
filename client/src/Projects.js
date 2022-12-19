@@ -172,15 +172,18 @@ const Card = styled.div`
         }
     }
     @media ${Device.laptop}{
+        width: 21vw;
         img{
-            margin: 1vw;
+            width:15vw;
+            height:10vw;
+        }
+        .text{
             width: 20vw;
-            height: 11vw;
         }
         h1{
-            font-size: 1.5vw;
+            font-size: 1vw;
         }
-        p, li{
+        p{
             font-size: 1vw;
         }
     }

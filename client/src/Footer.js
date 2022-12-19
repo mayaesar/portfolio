@@ -48,6 +48,11 @@ const Wrapper = styled.div`
     .icon{
         font-size: 5vw;
     }
+    @media ${Device.laptop}{
+        .icon{
+            font-size: 3vw;
+        }
+    }
 `;
 
 export default Footer;

@@ -3,7 +3,7 @@ import { Device } from "./Devices";
 import Img2 from "./assets/IMG_1824.png";
 import Img1 from "./assets/IMG_9908.jpeg";
 
-const About = () => {
+const About = ({setScrollingTo}) => {
     return (
         <Wrapper>
             <h1 id="about">About Me</h1>
@@ -27,7 +27,7 @@ const About = () => {
                         technology and design and look forward to the next chapters as new learnings and experiences continue to 
                         nourish my story.  
                     </p><br/>
-                    <button>Contact Me</button>
+                    <button onClick={() => setScrollingTo("contact")}>Contact Me</button>
                 </Text>
                 <Image className="img2">
                     <img src={Img2}/>
@@ -35,7 +35,6 @@ const About = () => {
                 <Image >
                     <img src={Img1}/>
                 </Image>
-                <div className="border"></div>
                 <Text>
                     <h2>In case you were wondering...</h2> <br/>
                     <ul>
@@ -63,8 +62,6 @@ const Wrapper = styled.div`
         display: none;
     }
     @media ${Device.tablet}{
-        margin: 10px;
-        padding: 10px;
         h1{
             font-size: 4vw;
         }
@@ -80,16 +77,30 @@ const Wrapper = styled.div`
     }
     @media ${Device.laptop}{
         .info{
+            margin: 30px; 
+            margin: auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
+            grid-template-columns: 52vw 34vw;
             justify-content: center;
+            padding-left: 30px;
+            padding-bottom: 30px;
         }
         .img2{
             display: block;
+            padding-top: 30px;
+        }
+        h1{
+            font-size: 2vw;
+        }
+        p, li{
+            font-size: 1.5vw;
+        }
+        button{
+            font-size: 1.8vw;
         }
     }
 `;
+
 const Text = styled.div`
     margin: 5px;
     padding: 5px;
@@ -101,7 +112,7 @@ const Text = styled.div`
     }
     button{
         font-size: 3.5vw;
-        background-color: #A0AEDC;
+        background-color: var(--secondary-colour);
         border: var(--border);
         padding: 5px;
         font-family: var(--primary-font-family);
@@ -118,15 +129,16 @@ const Text = styled.div`
         }
     }
     @media ${Device.laptop}{
-        h1{
-            font-size: 2vw;
+        h2{
+            font-size: 1.8vw;
         }
         p, li{
             font-size: 1.5vw;
         }
         button{
-            font-size: 1.5vw;
-            border-radius: 2vw;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 1.8vw;
         }
     }
 `;
@@ -137,8 +149,8 @@ const Image = styled.div`
         }
         @media ${Device.laptop}{
             img{
-                margin: 10vw;
-                width: 30vw;
+                width: 75%;
+                margin-left: 10px;
             }
         }
 `;

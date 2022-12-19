@@ -4,6 +4,7 @@ export default createGlobalStyle`
     :root {
         --secondary-font-family: 'Poppins', sans-serif;
         --primary-font-family: 'Unbounded', cursive;
+        --secondary-colour: #A0AEDC;
         --header-font-size: 1.5vw;
         --subheader-font-size: 1.2vw;
         --paragraph-font-size: 1vw;
@@ -34,8 +35,8 @@ export default createGlobalStyle`
         font-size: 100%;
         vertical-align: baseline;
         box-sizing: border-box;
-        color: var(--primary-colour);
         text-decoration: none;
+        color: black;
     }
 
     body{

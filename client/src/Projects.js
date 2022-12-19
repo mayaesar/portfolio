@@ -128,7 +128,7 @@ const Wrapper = styled.div`
     gap: 5px;
     grid-template-columns: 1fr 1fr;
     @media ${Device.tablet}{
-        padding-top: 110px;
+        padding-top: 30px;
     }
     @media ${Device.laptop}{
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -165,7 +165,10 @@ const Card = styled.div`
     }
     @media ${Device.tablet}{
         h1{
-            font-size: 3.7vw;
+            font-size: 3vw;
+        }
+        p{
+            font-size: 3vw;
         }
     }
     @media ${Device.laptop}{

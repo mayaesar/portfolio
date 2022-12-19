@@ -32,8 +32,10 @@ const Wrapper = styled.div`
             padding: 5px;
             font-size: 4.5vw;
         }
-    @media ${Device.laptop}{
-        
+        @media ${Device.tablet}{
+        h1{
+            font-size: 4vw;
+        }
     }
 `;
 
@@ -41,7 +43,6 @@ const MyProjects = styled.div`
     margin: 5px;
     padding: 10px;
     .buttonContainer{
-        background-color: white;
         display: flex;
         gap: 5px;
         width: 100%;
@@ -49,22 +50,19 @@ const MyProjects = styled.div`
     }
     button{
         font-size: 3.5vw;
-        background-color: white;
+        background-color: #A0AEDC;
         border: var(--border);
         padding: 5px;
         min-width:75px;
     }
     @media ${Device.tablet}{
-        min-height: 120px;
-        padding-top: 30px;
+        padding: 30px;
         .buttonContainer{
-            position: fixed;
-            overflow-x: scroll;
+            gap: 10px;
         }
         button{
-            width: 170px;
-            font-size: 3.5vw;
-            padding: 6px;
+            font-size: 3vw;
+            min-width: 150px;
         }
     }
     @media ${Device.laptop}{

@@ -21,15 +21,31 @@ const Wrapper = styled.div`
     img{
         margin-left: 5px;
         padding-bottom: 10px;
-        width: 22vw;
+        width: 80px;
         border-right: var(--border);
     }
     h2{
         padding-top: 25px;
+        font-size: 4vw;
+        padding-right: 5px;
         border-right: var(--border);
     }
     .last{
         border: none;
+    }
+    @media ${Device.tablet}{
+        gap: 10px;
+        img{
+            width: 125px;
+        }
+        h2{
+            font-size: 3vw;
+            padding-right: 10px;
+            padding-top: 50px;
+        }
+        .last{
+            border-right: var(--border);
+        }
     }
 
 

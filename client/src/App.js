@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import Header from "./Header";
 import Footer from "./Footer";
 import background from "./assets/bg-01-01.png"
+import { BiArrowToTop } from "react-icons/bi";
 const App = () => {
   const [scrollingTo, setScrollingTo] = useState();
 
@@ -36,7 +37,7 @@ const App = () => {
             <div className="border"></div>
             <Footer />
             <div className="topBtn">
-              <button onClick={() => setScrollingTo("top")}>Top</button>
+              <button onClick={() => setScrollingTo("top")}><BiArrowToTop/></button>
             </div>
       </Wrapper>
     </Bg>
@@ -59,6 +60,7 @@ const Wrapper = styled.div`
     border-top: var(--border);
   }
   .topBtn{
+    font-size: 3.5vw;
     position: fixed;
     bottom: 20px;
     right:20px;
@@ -67,10 +69,9 @@ const Wrapper = styled.div`
     color: red;
   }
   button{
-      font-size: 3.5vw;
-        background-color: white;
-        border: var(--border);
-        padding: 5px;
+    font-size: 3.5vw;
+    border: var(--border);
+    padding: 5px;
   }
 `;
 

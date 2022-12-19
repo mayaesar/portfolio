@@ -63,7 +63,20 @@ const Wrapper = styled.div`
         display: none;
     }
     @media ${Device.tablet}{
-        font-size: 3.5vw;
+        margin: 10px;
+        padding: 10px;
+        h1{
+            font-size: 4vw;
+        }
+        h2{
+            font-size: 3.6vw;
+        }
+        p, li{
+            font-size: 3.2vw;
+        }
+        button{
+            font-size: 3.2vw;
+        }
     }
     @media ${Device.laptop}{
         .info{
@@ -88,13 +101,21 @@ const Text = styled.div`
     }
     button{
         font-size: 3.5vw;
-        background-color: white;
+        background-color: #A0AEDC;
         border: var(--border);
         padding: 5px;
         font-family: var(--primary-font-family);
     }
     @media ${Device.tablet}{
-        padding-top: 20px;
+        h2{
+            font-size: 3.6vw;
+        }
+        p, li{
+            font-size: 3.2vw;
+        }
+        button{
+            font-size: 3.2vw;
+        }
     }
     @media ${Device.laptop}{
         h1{

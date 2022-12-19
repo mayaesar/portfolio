@@ -3,6 +3,7 @@ import {TiSocialLinkedin} from "react-icons/ti";
 import {TiSocialYoutube} from "react-icons/ti";
 import {TiSocialInstagram} from "react-icons/ti";
 import {FaTiktok} from "react-icons/fa";
+import { GoMarkGithub } from "react-icons/go";
 import { Device } from "./Devices";
 
 
@@ -27,6 +28,11 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/mayaesar/" target="_blank">
                 <div className="social">
                     <div className="icon"><TiSocialLinkedin /></div> 
+                </div>
+            </a>
+            <a href="https://github.com/mayaesar" target="_blank">
+                <div className="social">
+                    <div className="icon"><GoMarkGithub /></div> 
                 </div>
             </a>
         </Wrapper>

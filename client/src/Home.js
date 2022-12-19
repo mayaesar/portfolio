@@ -53,12 +53,25 @@ const Text = styled.div`
     }
     button{
         font-size: 3.5vw;
-        background-color: white;
+        background-color: #A0AEDC;
         border: var(--border);
         padding: 5px;
         font-family: var(--primary-font-family);
     }
 
+    @media ${Device.tablet}{
+        margin: 10px;
+        padding: 10px;
+        h1{
+            font-size: 4vw;
+        }
+        p{
+            font-size: 3.2vw;
+        }
+        button{
+            font-size: 3.2vw;
+        }
+    }
     @media ${Device.laptop}{
         width: 40vw;
         h1{
@@ -69,7 +82,6 @@ const Text = styled.div`
         }
         button{
             font-size: 1.5vw;
-            border-radius: 2vw;
         }
     }
 `;

@@ -30,48 +30,25 @@ const Wrapper = styled.div`
     }
     p{
         padding-top: 10px;
-        font-size: 3.5vw;
+        font-size: 4vw;
+    }
+    @media ${Device.tablet}{
+        h1{
+            font-size: 4vw;
+        }
+        p{
+            font-size: 3.2vw;
+        }
+        button{
+            font-size: 3.2vw;
+        }
     }
 `;
 
-// const Left = styled.div`
-//     margin: 5px;
-//     padding: 10px;
-//     margin-top: 35px;
-//     width: 35vw;
-//     h1{
-//         padding-bottom: 20px;
-//     }
-//     .social{
-//         margin-top: 10px;
-//         display: flex;
-//         gap: 5px;
-//         font-size: 3.5vw;
-//     }
-//     .icon{
-//         font-size: 3.5vw;
-//         padding-left: 20px;
-//     }
-//     @media ${Device.tablet}{
-//         width: 40vw;
-//         margin-top: 60px;
-//     }
-//     @media ${Device.laptop}{
-//         h1{
-//             font-size: 2vw;
-//         }
-//         p, li{
-//             font-size: 1.5vw;
-//         }
-//     }
-// `;
 const Text = styled.div`
     margin: 5px;
     padding: 10px;
     display: grid;
-    @media ${Device.tablet}{
-        margin-left: 10px;
-    }
     @media ${Device.laptop}{
         h1{
             font-size: 2vw;

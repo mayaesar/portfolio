@@ -7,7 +7,7 @@ import Gallery from "./Gallery";
 import Contact from "./Contact";
 import Header from "./Header";
 import Footer from "./Footer";
-import background from "./assets/bg-01-01.png"
+import background from "./assets/bg-01-01-01.png"
 import { BiArrowToTop } from "react-icons/bi";
 const App = () => {
   const [scrollingTo, setScrollingTo] = useState();

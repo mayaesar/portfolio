@@ -12,7 +12,8 @@ const Contact = () => {
                     Let's connect and have a conversation.<br/>
                     Let's talk creativity.<br/>
                     Let's explore projects.<br/>
-                    Who knows, we might just be a good fit.<br/></p>
+                    Who knows, we might just be a good fit.<br/>
+                    Feel free to send me an <a href="mailto:me@mayaesar.ca?subject=Let's%20Collaborate" className="link">Email</a>.</p>
             </Text>
         </Wrapper>
     );
@@ -54,6 +55,10 @@ const Text = styled.div`
     margin: 5px;
     padding: 10px;
     display: grid;
+    a{
+        color: blue;
+        text-decoration: underline;
+    }
     @media ${Device.laptop}{
         h2{
             font-size: 1.8vw;
